@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROG_boostrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        nav {
+            background-color: #202020;
+        }
+
+        .nav {
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: rgb(255, 255, 255);
+        }
+
+        .iconblock>.logo {
+            margin-right: 20px;
+        }
+
+        .iconblock .icon {
+            width: 40px;
+            padding: 0 5px;
+            fill: white;
+        }
+
+        .jumbotron {
+            padding: 0;
+        }
+
+        .jumbotron>.row {
+            margin: 0;
+        }
+
+        .row>img {
+            width: 100%;
+        }
+
+        h1 {
+            margin: auto;
+            font-weight: 400;
+            font-size: 36px;
+            margin-top: 85px;
+            margin-bottom: 55px;
+        }
+
+        .slide {
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 90px;
+        }
+
+        .arrowleft,
+        .arrowright {
+            width: 45px;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 85%;
+            text-align: center;
+
+            overflow: hidden;
+        }
+
+        .product>div {
+            width: 195px;
+        }
+
+        .product>div>img {
+            width: 100%;
+        }
+
+        .product>div>p {
+            line-height: 3rem;
+        }
+
+        .rog_bg {
+            background: url(./rog_pic/rog_bg_pattern.jpg)center center repeat;
+        }
+
+        .rog_bg h1 {
+            color: white;
+        }
+
+        .news {
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 15px;
+
+            /* width: 10vw; */
+            height: 20vw;
+
+            transition: .2s;
+        }
+        .news:hover{
+            transform: scale(1.1);
+        }
+        .news_text {
+            width: 100%;
+            position: absolute;
+            padding: 20px;
+            bottom: 0;
+        }
+
+        .news_text p {
+            color: #fff;
+            font-size: 20px;
+            margin: 0;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .rog_bg {
+            padding-bottom: 90px;
+        }
+
+        .join_rog {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .join_rog_text {
+            color: rgb(255, 255, 255);
+            position: absolute;
+            padding: 20px;
+            left: 60%;
+            top: calc(50% - 20px);
+        }
+
+        footer {
+            height: 520px;
+            background: url(./rog_pic/Roglogo_bg.jpg)center center;
+        }
+
+        .footerrow1 {
+            width: 100%;
+            padding: 20px 0;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footrow1_left {
+            width: 30%;
+            justify-content: space-between;
+        }
+
+        .footrow1_left a {
+            color: #BFBFBF;
+        }
+
+        .footerrow1_right {
+            /* width: 10%; */
+            flex:0 0 20%;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .footerrow2 {
+            padding: 20px;
+            font-size: 14px;
+            justify-content: space-between;
+        }
+
+        .language {
+            width: 50%;
+        }
+
+        .icon {
+            width: 20px;
+        }
+
+        .copyright {
+            width: 40%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg px-lg-5 px-xl-5">
+        <div class="nav-logo">
+            <a class="navbar-brand ml-lg-5" href="">
+                <img src="./rog_pic/rog-logo@3x.png" alt="Logo" width="200">
+            </a>
+        </div>
+        <button class="navbar-toggler d-lg-none d-xl-none mr-auto" type="button" data-toggle="collapse"
+            data-target="#navmain" aria-expanded="false" aria-label="navmain">
+            <!-- data為給js判斷的前綴字 -->
+            <!-- aria都是給閱讀器看的 -->
+            <img src="./icomoon/SVG/menu.svg" alt="">
+        </button>
+        <ul class="nav collapse navbar-collapse px-5 col-5 mx-auto" id="navmain">
+            <a href="">
+                <li class="dropdown nav-item">產品</li>
+            </a>
+            <a href="">
+                <li class="dropdown nav-item">創新</li>
+            </a>
+            <a href="">
+                <li class="dropdown nav-item">下載</li>
+            </a>
+            <a href="">
+                <li class="dropdown nav-item">熱門活動</li>
+            </a>
+            <a href="">
+                <li class="dropdown nav-item">最新資訊</li>
+            </a>
+            <a href="">
+                <li class="dropdown nav-item">服務與支援</li>
+            </a>
+        </ul>
+        <div class="iconblock d-flex">
+            <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="71.418" height="15.556"
+                    viewBox="0 0 71.418 15.556" svg-inline="" role="presentation" focusable="false" tabindex="-1"
+                    class="svg-icon">
+                    <g data-name="组件 69 – 1">
+                        <path fill="#797979" stroke="rgba(0,0,0,0)" stroke-miterlimit="10"
+                            d="M52.803 15.056l.009-3.84h13.593a1.609 1.609 0 00.649-.183.818.818 0 00.256-.578c0-.737-.613-.769-.921-.785l-9.882-.815A4.615 4.615 0 0154.3 7.812a3.758 3.758 0 01-1.271-2.052s12.766.746 14.184.877a4.359 4.359 0 013.618 3.351 6.077 6.077 0 01-.022 1.57 4.233 4.233 0 01-4.008 3.5zm-12.767-.017l-.354-.025a4.216 4.216 0 01-3.621-3.534v-.609a5.825 5.825 0 01-.077.656 4.261 4.261 0 01-3.52 3.5h-18.3v-9.8l3.8.276v5.738h13.688a.768.768 0 00.807-.74c.007-.738-.562-.814-.864-.828 0 0-9.444-.774-9.782-.806a4.988 4.988 0 01-2.284-1.074 3.976 3.976 0 01-1.2-2.258s12.694 1 14.119 1.129c2.392.221 3.494 2.753 3.59 3.327 0 0 .008.059.015.164V4.642l3.881.278v5.078a1.23 1.23 0 001.119 1.273h6.6a1.264 1.264 0 001.267-1.285v-4.46l3.843.227v5.358c0 3.627-3.817 3.931-3.817 3.931zM.918 15.021L7.651 4.597l4.341.458-6.472 9.966zM52.803 4.363v-.311a5.491 5.491 0 01.973-2A4.27 4.27 0 0156.918.5h14v3.866zm-3.937 0V.519h3.909v3.844zm-12.844 0V.519h3.912v3.844zm-28.216 0s1.589-2.59 1.983-3.1a1.682 1.682 0 011.4-.738h6.946v3.527a5.5 5.5 0 01.977-2A4.252 4.252 0 0122.253.496h13.086v3.863z"
+                            data-name="联合 1"></path>
+                    </g>
+                </svg></div>
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" data-name="圖層 1" viewBox="0 0 32 32" svg-inline=""
+                    role="presentation" focusable="false" tabindex="-1" class="svg-icon">
+                    <!-- path fill 為SVG填色 -->
+                    <path
+                        d="M26.44 24.32l-3.65-3.65a9.79 9.79 0 00-7.9-15.57A9.8 9.8 0 008 21.82a9.79 9.79 0 0012.7 1l3.64 3.65a1.54 1.54 0 001.1.46 1.48 1.48 0 001.05-.44 1.51 1.51 0 00-.05-2.17zM14.89 6.86a8 8 0 11-5.68 2.35 8 8 0 015.68-2.35z">
+                    </path>
+                </svg></div>
+            <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" data-name="圖層 1" viewBox="0 0 32 32" svg-inline=""
+                    role="presentation" focusable="false" tabindex="-1" class="svg-icon">
+                    <path fill="white"
+                        d="M5 27c0-5.2 4.93-9.37 11-9.37s11 4.17 11 9.29l-.9.06h-.9c0-4.13-4.13-7.49-9.2-7.49s-9.2 3.36-9.2 7.49zm11-9.67a6.59 6.59 0 116.58-6.59A6.59 6.59 0 0116 17.33zM16 6a4.79 4.79 0 104.78 4.78A4.78 4.78 0 0016 6z">
+                    </path>
+                </svg></div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="row">
+            <img src="https://dlcdnwebimgs.asus.com/gain/9BCC5E8A-7CFC-45A6-9597-34E0CC77C729" alt="ROG x AW"
+                title="ROG x AW" class="BannerSlideShow__bannerImage__3MN__">
+        </div>
+    </div>
+    <div class="col-12 mx-auto">
+        <div class="row">
+            <h1>探索我們的產品</h1>
+        </div>
+        <div class="row slide">
+            <div class="arrowleft d-none d-lg-block"><svg xmlns="http://www.w3.org/2000/svg" data-name="圖層 1"
+                    viewBox="0 0 64 64" svg-inline="" role="presentation" focusable="false" tabindex="-1" class="icon">
+                    <path d="M7.95 15.06L22.99 0v3.37L10.38 16.01l12.61 12.62V32L7.95 16.95l-.94-.94.94-.95z"></path>
+                </svg></div>
+            <div class="product col-10">
+                <div class="notebook col-12 col-md-4 col-xl-2">
+                    <img src="./rog_pic/h175.jpg" alt="">
+                    <p>筆記型電腦</p>
+                </div>
+                <div class="motherboard col-12 col-md-4 col-xl-2">
+                    <img src="./rog_pic/h175.png" alt="">
+                    <p>主機板</p>
+                </div>
+                <div class="graphcard col-12 col-md-4 col-xl-2">
+                    <img src="./rog_pic/h175 (1).png" alt="">
+                    <p>顯示卡</p>
+                </div>
+                <div class="screen col-12 col-md-4 col-xl-2">
+                    <img src="./rog_pic/h175 (2).png" alt="">
+                    <p>顯示器</p>
+                </div>
+                <div class="phone col-12 col-md-4 col-xl-2">
+                    <img src="rog_pic/h175 (3).png" alt="">
+                    <p>智慧型手機</p>
+                </div>
+            </div>
+            <div class="arrowright d-none d-lg-block"><svg xmlns="http://www.w3.org/2000/svg" data-name="圖層 1"
+                    viewBox="0 0 64 64" svg-inline="" role="presentation" focusable="false" tabindex="-1" class="icon">
+                    <path d="M24.05 15.06L9.01 0v3.37l12.61 12.64L9.01 28.63V32l15.04-15.05.94-.94-.94-.95z"></path>
+                </svg></div>
+        </div>
+    </div>
+    <div class="rog_bg">
+        <div class="container container2">
+            <div class="row">
+                <h1>熱門訊息</h1>
+            </div>
+            <div class="newsblock row">
+                <div class="news col-4">
+                    <img style="object-fit:cover;object-position:-200px -30px;" src="./rog_pic/1616666887855.png" alt="">
+                    <div class="news_text">
+                        <p>地表最強電競手機ROG PHONE 5震撼登場！</p>
+                        <p>ROG玩家共和國於《For Those Who Dare》線上發表「地表最強電競手機」－ROG Phone 5及多款配件。</p>
+                    </div>
+                </div>
+                <div class="news col-4">
+                    <img style="object-fit:cover;object-position:-200px -30px;" src="./rog_pic/1612195780482.jpg" alt="">
+                    <div class="news_text">
+                        <p>華碩電競筆電2020市佔第一！</p>
+                    </div>
+                </div>
+                <div class="news col-4">
+                    <img style="object-fit: cover;object-position:-200px -30px;" src="./rog_pic/1612194574240.jpg" alt="">
+                    <div class="news_text">
+                        <p>ROG打造台北電玩展NO.1朝聖點 鋼彈聯名主題區華麗進駐</p>
+                        <p>台北國際電玩展今日開幕，ROG玩家共和國結合Cyberpunk與科技元素，打造最狂朝聖點「七號戰場」，前來體驗即贈ROG防疫口罩，完成任務享客製帆布包或軍牌項鍊。</p>
+                    </div>
+                </div>
+                <div class="news col-6">
+                    <img style="object-fit: cover;object-position:-100px -30px;" src="./rog_pic/1611069553933.jpg" alt="">
+                    <div class="news_text">
+                        <p>CES 2021 ROG玩家共和國 新世代電競筆電、配件齊發</p>
+                    </div>
+                </div>
+                <div class="news col-6">
+                    <img style="object-fit: cover;object-position:-100px -30px" src="./rog_pic/1607942701390.jpg" alt="">
+                    <div class="news_text">
+                        <p>ROG ZEPHYRUS DUO 15 勇奪「金點」年度最佳設計獎</p>
+                    </div>
+                </div>
+
+                <!-- <div class="row"></div> -->
+            </div>
+        </div>
+    </div>
+    <div class="join_rog">
+        <img style="width:100%" src="https://dlcdnwebimgs.asus.com/gain/FDFFE426-0A29-40D5-8E26-C838EB26CA8F"
+            alt="ROG 世界的藝術" title="ROG 世界的藝術" class="StoryFooter__backgroundImage__3rvK1">
+        <div class="join_rog_text">
+            <h3>ROG 世界的藝術</h3>
+            <p>科技永不休止，行動也永不停歇。對於渴望獲勝者，玩家共和國正等待著您的到來。在持續不斷的創新之下，ROG 致力於為各地的遊戲玩家和愛好者提供超乎想像的體驗。</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_area px-5">
+            <div class="footerrow1 d-sm-flex border-bottom border-secondary">
+                <div class="footrow1_left px-0 d-md-flex col-12 col-md-6">
+                    <div class="about px-0 col-12 col-md-4 mb-2"><a href="">關於ROG</a></div>
+                    <div class="homepage px-0 col-12 col-md-4 mb-2"><a href="">首頁</a></div>
+                    <div class="newmessage px-0 col-12 col-md-4 mb-2"><a href="">最新消息</a></div>
+                </div>
+                <div class="footerrow1_right d-flex py-2 col-12 col-md-6 mr-md-0">
+                    <div class="icon mb-2 mb-sm-0"><img src="./icomoon/SVG/facebook.svg" alt=""></div>
+                    <div class="icon"><img src="./icomoon/SVG/instagram.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="footerrow2 d-md-flex">
+                <div class="language d-flex col-12 col-md-6">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" data-name="圖層 1" viewBox="0 0 32 32" svg-inline=""
+                            class="Footer__languageIcon__3rx9F" role="presentation" focusable="false" tabindex="-1">
+                            <path fill="#797979"
+                                d="M16 0a16 16 0 1016 16A16 16 0 0016 0zm14.28 16h-5.85a29.25 29.25 0 00-.65-6.25 18.25 18.25 0 004.08-1.7 14.21 14.21 0 012.42 8zm-21 0a27.59 27.59 0 01.61-5.83 29.15 29.15 0 005.24.61V16H9.29zm13.42 0h-5.84v-5.22a29.15 29.15 0 005.24-.61 27.59 27.59 0 01.61 5.83zm-7.56 14.14c-1.67-.48-3.17-2.32-4.23-5a26.22 26.22 0 014.23-.45zm1.72-5.42a26.22 26.22 0 014.23.45c-1.06 2.65-2.56 4.49-4.23 5zm0-1.72v-5.25h5.79a25.52 25.52 0 01-1 5.76 29.41 29.41 0 00-4.79-.51zm0-13.94v-7.2c2 .57 3.75 3.11 4.81 6.64a27.42 27.42 0 01-4.81.56zm-1.72-7.2v7.2a27.42 27.42 0 01-4.81-.56c1.06-3.5 2.81-6.07 4.81-6.64zm0 15.89V23a29.41 29.41 0 00-4.8.51 25.52 25.52 0 01-1-5.76zm-6.5 6.15a20.36 20.36 0 00-3.53 1.31 14.26 14.26 0 01-3.27-7.46h5.78a27.14 27.14 0 001.02 6.15zm.56 1.64a14.1 14.1 0 002.25 4 14.19 14.19 0 01-5.08-3 19.55 19.55 0 012.83-1zm13.6 0a19.55 19.55 0 012.83 1 14.19 14.19 0 01-5.08 3 14.1 14.1 0 002.25-4zm.56-1.64a27.14 27.14 0 001-6.15h5.78a14.26 14.26 0 01-3.27 7.46 20.36 20.36 0 00-3.51-1.31zM26.8 6.68a17.25 17.25 0 01-3.45 1.4 15.46 15.46 0 00-2.8-5.6 14.3 14.3 0 016.25 4.2zm-15.35-4.2a15.46 15.46 0 00-2.8 5.6 17.25 17.25 0 01-3.45-1.4 14.3 14.3 0 016.25-4.2zM4.14 8.05a18.25 18.25 0 004.08 1.7A29.25 29.25 0 007.57 16H1.72a14.21 14.21 0 012.42-7.95z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="pl-2" style="color:#999999">Taiwan/繁體中文</p>
+                </div>
+                <div class="copyright d-flex">
+                    <p class="col-12 col-md-7" style="color:#999999">©ASUSTEK COMPUTER INC. ALL RIGHTS RESERVED. </p>
+                    <p class="col-12 col-md-2" style="color:#999999">使用條款</p>
+                    <p class="col-12 col-md-3" style="color:#999999">隱私權保護政策</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
